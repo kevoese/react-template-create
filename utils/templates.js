@@ -14,7 +14,7 @@ const ${name} = () => {
 export default ${name};
 `;
 
-const classComp = (name) => `import React, { Component } from 'react';
+const classComp = (name, {status, ext}) => `import React, { Component } from 'react';
 ${status ? styleImport(name, ext) : ''}
 class ${name} extends Component {
     state = {
