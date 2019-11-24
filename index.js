@@ -32,7 +32,7 @@ fs.mkdir(setup.path, { recursive: true }, (err, data) => {
 
     fs.writeFile(
       `${setup.path}/index.${config.reactExt}`,
-      templates.reactFile(setup.compType, setup.name),
+      templates.reactFile(setup.compType, setup.name, {status: setup.style, ext: config.styleExt}),
       {flag: 'wx'},
       err => {
         if (err) {
