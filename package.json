@@ -1,0 +1,14 @@
+{
+  "name": "react-template-create",
+  "version": "1.0.0",
+  "description": "An app that allows you to create component templates from cli",
+  "main": "index.js",
+  "bin": {
+    "r-create": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kelvin Esegbona",
+  "license": "ISC"
+}
