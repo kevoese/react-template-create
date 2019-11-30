@@ -1,8 +1,8 @@
 # React-template-create
-Creates react component boiler plates
+A CLI tool for easy react app development.
 
 # Description
-Creating a component file and writng the same boiler plate code can be tedious. This package lets you create boiler code and files in your react project.
+Creating a component file and writng the same boilerplate code can be tedious. This package lets you create boiler code and files in your react project.
 
 ## Setup 
 ```
