@@ -1,11 +1,11 @@
 const styleImport = (name, ext) => `import './${name}.${ext}'
-`
+`;
 
-const funcComp = (name, {status, ext}) => `import React from 'react';
+const funcComp = (name, { status, ext }) => `import React from 'react';
 ${status ? styleImport(name, ext) : ''}
 const ${name} = () => {
     return (
-        <div>
+        <div ${status ? `className="${name.toLowerCase()}"` : ''} >
             
         </div>
     )
@@ -14,7 +14,10 @@ const ${name} = () => {
 export default ${name};
 `;
 
-const classComp = (name, {status, ext}) => `import React, { Component } from 'react';
+const classComp = (
+  name,
+  { status, ext }
+) => `import React, { Component } from 'react';
 ${status ? styleImport(name, ext) : ''}
 class ${name} extends Component {
     state = {
@@ -23,7 +26,7 @@ class ${name} extends Component {
 
     render() {
         return (
-            <div>
+            <div ${status ? `className="${name.toLowerCase()}"` : ''} >
                 
             </div>
         )
@@ -48,14 +51,20 @@ describe('${name} Component', () => {
 });
 `;
 
-const reactFile = (type, name, style) => {
- if (type === 'class') {
-     return classComp(name, style);
- }
- return funcComp(name, style);
+const styleFile = name => `.${name.toLowerCase()} {
+    
 }
+`;
+
+const reactFile = (type, name, style) => {
+  if (type === 'class') {
+    return classComp(name, style);
+  }
+  return funcComp(name, style);
+};
 
 module.exports = {
-    reactFile,
-    testFile,
-}
+  reactFile,
+  testFile,
+  styleFile,
+};

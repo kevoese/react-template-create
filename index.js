@@ -22,7 +22,7 @@ fs.mkdir(setup.path, { recursive: true }, (err, data) => {
       if (setup.style) {
         fs.writeFileSync(
           `${setup.path}/${setup.name}.${config.styleExt}`,
-          '',
+          templates.styleFile(setup.name),
           {flag: 'wx'}
         );
       }
