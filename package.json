@@ -1,6 +1,6 @@
 {
   "name": "react-template-create",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An app that allows you to create component templates from cli",
   "main": "index.js",
   "bin": {

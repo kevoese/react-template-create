@@ -22,8 +22,8 @@ const capitalize = name => {
 
 const getInfo = (opt, config) => {
   let struct = {
-    style: config.autoCreateTest,
-    test: config.autoCreateStyle,
+    style: config.autoCreateStyle,
+    test: config.autoCreateTest,
     folderType: 'component',
     compType: config.reactCompType,
     name: capitalize(opt[0]),
